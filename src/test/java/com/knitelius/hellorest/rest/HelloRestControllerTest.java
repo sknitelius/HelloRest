@@ -1,0 +1,26 @@
+package com.knitelius.hellorest.rest;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import com.knitelius.hellorest.rest.client.HelloRestControllerClient;
+
+public class HelloRestControllerTest {
+
+	private static String url;
+	
+	@BeforeClass
+	public static void beforeClass() {
+		url = System.getProperty("url") != null ? System.getProperty("url") : "http://localhost:9080/hellorest";
+	}
+	
+	@Test
+	public void test() {
+		HelloRestControllerClient client = new HelloRestControllerClient(url);
+		String helloMessage = client.invokeMessages();
+		assertEquals("Hello Rest!", helloMessage);
+	}
+
+}
