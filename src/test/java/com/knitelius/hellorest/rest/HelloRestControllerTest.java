@@ -12,6 +12,7 @@ public class HelloRestControllerTest {
 	@BeforeClass
 	public static void beforeClass() {
 		url = System.getProperty("url") != null ? System.getProperty("url") : "http://localhost:9080/hellorest";
+		System.out.println(String.format("url: %s", url)); 
 	}
 	
 	@Test
