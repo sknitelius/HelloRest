@@ -16,6 +16,16 @@ public class HelloRestControllerClient {
 		this.resourceUrl = resourceUrl;
 	}
 	
+	public String invokeMessage(String s){
+		Client client = ClientBuilder.newBuilder().build();
+		WebTarget target = client.target(resourceUrl + "/hello");
+		target = target.queryParam("name", s);
+		
+		Invocation.Builder builder = target.request();
+		Response response = builder.get();
+		return response.readEntity(String.class);
+	}
+
 	public String invokeMessages(){
 		Client client = ClientBuilder.newBuilder().build();
 		WebTarget target = client.target(resourceUrl + "/hello");

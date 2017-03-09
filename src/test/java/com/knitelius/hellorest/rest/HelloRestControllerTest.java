@@ -23,5 +23,12 @@ public class HelloRestControllerTest {
 		String returnValue = client.invokeMessages();
 		assertEquals("Hello Rest!", returnValue);
 	}
+	
+//	@Test
+//	public void testQueryParamn() {
+//		HelloRestControllerClient client = new HelloRestControllerClient(url);
+//		String message = client.invokeMessage("InterConnect");
+//		assertEquals("Hello InterConnect!", message);
+//	}
 
 }
