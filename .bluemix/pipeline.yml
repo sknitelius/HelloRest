@@ -21,6 +21,10 @@ stages:
     job: Build
   triggers:
   - type: stage
+  properties:
+  - name: url
+    value: http://${CF_APP}.mybluemix.net/
+    type: text
   jobs:
   - name: Deploy
     type: deployer
@@ -36,6 +40,6 @@ stages:
     type: tester
     script: |-
       #!/bin/bash
-      mvn test -Durl="http://hellorest-int.mybluemix.net/"
+      mvn test -Durl="${url}"
     enable_tests: true
     test_file_pattern: tests/TEST-*.xml
