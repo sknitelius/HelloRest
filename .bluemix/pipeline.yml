@@ -40,6 +40,6 @@ stages:
     type: tester
     script: |-
       #!/bin/bash
-      mvn test -Durl="$(cf apps | grep $app_name | awk '{print $NF}')"
+      mvn test -Durl="http://$app_name.mybluemix.net/"
     enable_tests: true
     test_file_pattern: tests/TEST-*.xml
