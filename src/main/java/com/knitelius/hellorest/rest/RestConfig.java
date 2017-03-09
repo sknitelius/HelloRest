@@ -26,10 +26,6 @@ package com.knitelius.hellorest.rest;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-/**
- *
- * @author sknitelius
- */
 @ApplicationPath("/")
 public class RestConfig extends Application {
     
