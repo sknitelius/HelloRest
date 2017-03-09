@@ -22,8 +22,8 @@ stages:
   triggers:
   - type: stage
   properties:
-  - name: url
-    value: http://${CF_APP}.mybluemix.net/
+  - name: app_name
+    value: ${CF_APP}
     type: text
   jobs:
   - name: Deploy
@@ -40,6 +40,6 @@ stages:
     type: tester
     script: |-
       #!/bin/bash
-      mvn test -Durl="${url}"
+      mvn test -Durl="$(cf apps | grep $app_name | awk '{print $NF}')"
     enable_tests: true
     test_file_pattern: tests/TEST-*.xml
