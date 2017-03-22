@@ -1,8 +1,5 @@
 ---
 applications:
-- name: HelloRest
-  memory: 512M
-  host: HelloRest
-  domain: mybluemix.net
+- memory: 512M
   env:
     JBP_CONFIG_LIBERTY: 'app_archive: {features: [ejbLite-3.2, jaxrs-2.0]}'
