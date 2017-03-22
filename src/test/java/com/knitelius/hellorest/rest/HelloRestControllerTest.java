@@ -1,11 +1,8 @@
 package com.knitelius.hellorest.rest;
 
-import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import com.knitelius.hellorest.rest.client.HelloRestControllerClient;
 
 public class HelloRestControllerTest {
 
@@ -19,16 +16,7 @@ public class HelloRestControllerTest {
 
 	@Test
 	public void test() {
-		HelloRestControllerClient client = new HelloRestControllerClient(url);
-		String returnValue = client.invokeMessages();
-		assertEquals("Hello Rest!", returnValue);
+		//TODO
 	}
-	
-//	@Test
-//	public void testQueryParamn() {
-//		HelloRestControllerClient client = new HelloRestControllerClient(url);
-//		String message = client.invokeMessage("InterConnect");
-//		assertEquals("Hello InterConnect!", message);
-//	}
 
 }

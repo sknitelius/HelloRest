@@ -31,7 +31,7 @@ import javax.ws.rs.core.MediaType;
 
 
 @Path("hello")
-public class HelloRestController {
+public class HelloController {
     
 	@GET
 	public String message(@QueryParam("name") String name) {
