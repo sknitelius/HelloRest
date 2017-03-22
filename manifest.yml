@@ -5,4 +5,4 @@ applications:
   host: HelloRest
   domain: mybluemix.net
   env:
-    JBP_CONFIG_LIBERTY: 'app_archive: {features: [websocket-1.1, jdbc-4.1]}'
+    JBP_CONFIG_LIBERTY: 'app_archive: {features: [ejbLite-3.2, jaxrs-2.0]}'
