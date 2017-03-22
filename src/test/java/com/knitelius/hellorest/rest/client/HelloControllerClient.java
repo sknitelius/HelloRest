@@ -15,11 +15,9 @@ public class HelloControllerClient {
 		this.resourceUrl = resourceUrl;
 	}
 	
-	public String invokeMessage(String s){
+	public String invokeMessage(){
 		Client client = ClientBuilder.newBuilder().build();
 		WebTarget target = client.target(resourceUrl + "/hello");
-		target = target.queryParam("name", s);
-		
 		Invocation.Builder builder = target.request();
 		Response response = builder.get();
 		return response.readEntity(String.class);

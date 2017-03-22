@@ -20,7 +20,7 @@ public class HelloControllerTest {
 	@Test
 	public void test() {
 		HelloControllerClient client = new HelloControllerClient(url);
-		String returnValue = client.invokeMessage("InterConnect");
+		String returnValue = client.invokeMessage();
 		assertEquals("Hello InterConnect!", returnValue);
 	}
 
