@@ -1,0 +1,8 @@
+---
+applications:
+- name: HelloRest
+  memory: 512M
+  host: HelloRest
+  domain: mybluemix.net
+  env:
+    JBP_CONFIG_LIBERTY: 'app_archive: {features: [websocket-1.1, jdbc-4.1]}'

@@ -23,15 +23,15 @@
  */
 package com.knitelius.hellorest.rest;
 
+import javax.ejb.Stateless;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
 
 
 @Path("hello")
-public class HelloRestController {
+@Stateless
+public class HelloController {
     
 	@GET
 	public String message(@QueryParam("name") String name) {
